@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Usulan Perbaikan Kualitas — PT Makmur Bersama Sahabat</title>
+    <meta name="description"
+        content="Dashboard digital SOP dan formulir usulan perbaikan kualitas proses produksi AMDK 600 ML PT Makmur Bersama Sahabat">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-icon">
+                <svg viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="12" fill="url(#logoGrad)" />
+                    <path d="M12 28V16l8-6 8 6v12H22v-6h-4v6H12z" fill="white" opacity="0.9" />
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                            <stop stop-color="#2e8bc0" />
+                            <stop offset="1" stop-color="#5ab0d5" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="logo-text">
+                <span class="logo-title">SOP Dashboard</span>
+                <span class="logo-sub">PT Makmur Bersama Sahabat</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-section-label">MENU UTAMA</div>
+            <button class="nav-item active" data-page="home" onclick="navigateTo('home')">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                <span>Beranda</span>
+            </button>
+
+            <div class="nav-section-label">PREFORM & TUTUP BOTOL</div>
+            <button class="nav-item" data-page="usulan1" onclick="navigateTo('usulan1')">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                </svg>
+                <span>Usulan 1 — IQC Preform</span>
+            </button>
+            <button class="nav-item" data-page="usulan2" onclick="navigateTo('usulan2')">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
+                    <rect x="9" y="3" width="6" height="4" rx="1" />
+                </svg>
+                <span>Usulan 2 — Inspeksi Tutup Botol</span>
+            </button>
+
+            <div class="nav-section-label">PEMELIHARAAN MESIN</div>
+            <button class="nav-item" data-page="usulan3" onclick="navigateTo('usulan3')">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+                </svg>
+                <span>Usulan 3 — Checklist Maintenance</span>
+            </button>
+
+            <div class="nav-section-label">SUHU & LINGKUNGAN</div>
+            <button class="nav-item" data-page="usulan4" onclick="navigateTo('usulan4')">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z" />
+                </svg>
+                <span>Usulan 4 — SOP Suhu & Kelembapan</span>
+            </button>
+            <button class="nav-item" data-page="usulan5" onclick="navigateTo('usulan5')">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <span>Usulan 5 — Verifikasi Pemanasan</span>
+            </button>
+
+            <div class="nav-section-label">PEMBERSIHAN MESIN</div>
+            <button class="nav-item" data-page="usulan6" onclick="navigateTo('usulan6')">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                </svg>
+                <span>Usulan 6 — Pembersihan Capping</span>
+            </button>
+
+            <div class="nav-section-label">MANAJEMEN</div>
+            <button class="nav-item" data-page="riwayat" onclick="navigateTo('riwayat')">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span>Riwayat Pemeriksaan</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="footer-badge">Tugas Akhir 2025</div>
+        </div>
+    </aside>
+
+    <!-- ===== MOBILE HEADER ===== -->
+    <header class="mobile-header" id="mobileHeader">
+        <button class="hamburger" onclick="toggleSidebar()">
+            <span></span><span></span><span></span>
+        </button>
+        <span class="mobile-title">SOP Dashboard</span>
+    </header>
+
+    <!-- ===== OVERLAY ===== -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content" id="mainContent">
+
+        <!-- ==================== HOME ==================== -->
+        <section class="page active" id="page-home">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Dashboard Usulan Perbaikan Kualitas</h1>
+                    <p class="page-subtitle">Proses Produksi AMDK 600 ML — PT Makmur Bersama Sahabat</p>
+                </div>
+                <div class="header-badge">
+                    <span class="badge-dot"></span>
+                    6 Usulan Perbaikan
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card stat-purple">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value">6</span>
+                        <span class="stat-label">Usulan Perbaikan</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-blue">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Penyebab Kegagalan Prioritas</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-emerald">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value">Rp37,6 Jt</span>
+                        <span class="stat-label">Estimasi Penghematan COPQ</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-amber">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                            <polyline points="17 6 23 6 23 12" />
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value">38–50%</span>
+                        <span class="stat-label">Proyeksi Penurunan RPN</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proposal Cards -->
+            <h2 class="section-title">Daftar Usulan Perbaikan</h2>
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="proposal-card" onclick="navigateTo('usulan1')">
+                    <div class="card-lamp lamp-e">Formulir</div>
+                    <div class="card-number">01</div>
+                    <h3 class="card-title">Incoming Quality Control (IQC) Preform & Evaluasi Pemasok</h3>
+                    <p class="card-desc">Formulir pemeriksaan kualitas preform per jenis cacat (dimensi, fisik, warna,
+                        kontaminasi, ketebalan) beserta evaluasi pemasok.</p>
+                    <div class="card-tags">
+                        <span class="tag">C11</span><span class="tag">C12</span><span class="tag">C14</span>
+                    </div>
+                    <div class="card-footer"><span class="card-link">Buka Formulir →</span></div>
+                </div>
+                <!-- Card 2 -->
+                <div class="proposal-card" onclick="navigateTo('usulan2')">
+                    <div class="card-lamp lamp-e">Formulir</div>
+                    <div class="card-number">02</div>
+                    <h3 class="card-title">Formulir Inspeksi Kualitas Tutup Botol pada Produk Jadi</h3>
+                    <p class="card-desc">Inspeksi kualitas tutup botol per jenis cacat (retak, cetakan, warna, longgar,
+                        ketat, seal ring) setelah proses capping.</p>
+                    <div class="card-tags">
+                        <span class="tag">C36</span><span class="tag">C37</span>
+                    </div>
+                    <div class="card-footer"><span class="card-link">Buka Formulir →</span></div>
+                </div>
+                <!-- Card 3 -->
+                <div class="proposal-card" onclick="navigateTo('usulan3')">
+                    <div class="card-lamp lamp-f">Formulir</div>
+                    <div class="card-number">03</div>
+                    <h3 class="card-title">Checklist Maintenance Mesin Blowing & Filling</h3>
+                    <p class="card-desc">Checklist pemeliharaan harian, mingguan, dan bulanan untuk mesin blowing,
+                        filling air, dan capping tutup botol.</p>
+                    <div class="card-tags">
+                        <span class="tag">C22</span><span class="tag">C26</span>
+                    </div>
+                    <div class="card-footer"><span class="card-link">Buka Checklist →</span></div>
+                </div>
+                <!-- Card 4 -->
+                <div class="proposal-card" onclick="navigateTo('usulan4')">
+                    <div class="card-lamp lamp-g">Formulir</div>
+                    <div class="card-number">04</div>
+                    <h3 class="card-title">SOP Pengendalian Suhu & Kelembapan Area Produksi</h3>
+                    <p class="card-desc">Pencatatan suhu dan kelembapan secara terpisah dengan standar masing-masing
+                        menggunakan thermo-hygrometer.</p>
+                    <div class="card-tags">
+                        <span class="tag">C27</span><span class="tag">C38</span><span class="tag">C39</span>
+                    </div>
+                    <div class="card-footer"><span class="card-link">Buka SOP →</span></div>
+                </div>
+                <!-- Card 5 -->
+                <div class="proposal-card" onclick="navigateTo('usulan5')">
+                    <div class="card-lamp lamp-g">Formulir</div>
+                    <div class="card-number">05</div>
+                    <h3 class="card-title">SOP & Formulir Verifikasi Pemanasan Preform</h3>
+                    <p class="card-desc">Standar parameter suhu heater, daya lampu per zona, pengecekan cooling thread,
+                        dan verifikasi kualitas botol.</p>
+                    <div class="card-tags">
+                        <span class="tag">C13</span>
+                    </div>
+                    <div class="card-footer"><span class="card-link">Buka SOP →</span></div>
+                </div>
+                <!-- Card 6 -->
+                <div class="proposal-card" onclick="navigateTo('usulan6')">
+                    <div class="card-lamp lamp-h">Formulir</div>
+                    <div class="card-number">06</div>
+                    <h3 class="card-title">Jadwal & Prosedur Pembersihan Mesin Capping</h3>
+                    <p class="card-desc">Jadwal pembersihan mingguan mesin capping meliputi chuck, conveyor, sensor, dan
+                        area mesin secara menyeluruh.</p>
+                    <div class="card-tags">
+                        <span class="tag">C35</span>
+                    </div>
+                    <div class="card-footer"><span class="card-link">Buka Jadwal →</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== USULAN 1 — IQC PREFORM ==================== -->
+        <section class="page" id="page-usulan1">
+            <div class="page-header">
+                <div>
+                    <button class="back-btn" onclick="navigateTo('home')">← Kembali</button>
+                    <h1 class="page-title">Usulan 1 — Incoming Quality Control (IQC) Preform</h1>
+                    <p class="page-subtitle">Evaluasi & Pencatatan Cacat Material Masuk</p>
+                </div>
+                <button class="btn-print" onclick="window.print()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+                        <rect x="6" y="14" width="12" height="8" />
+                    </svg>
+                    Cetak
+                </button>
+            </div>
+
+            <div class="info-card">
+                <h3>Deskripsi Usulan</h3>
+                <p>Penerapan Incoming Quality Control (IQC) dilakukan dengan memeriksa setiap lot preform yang datang
+                    dari pemasok. Pemeriksaan meliputi <strong>keseragaman ukuran/dimensi preform</strong>,
+                    <strong>kondisi fisik</strong> (retak, gompal, goresan), <strong>keseragaman warna</strong>,
+                    <strong>keberadaan kontaminan/kotoran</strong>, dan <strong>keseragaman ketebalan dinding
+                        preform</strong>. Setiap jenis cacat dicatat secara terpisah agar pola kegagalan dapat
+                    dianalisis dengan tepat.
+                </p>
+            </div>
+
+            <!-- FORM IQC PREFORM -->
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-header-top">
+                        <h2>FORM INCOMING QUALITY CONTROL (IQC) PREFORM</h2>
+                        <span class="doc-number">No. Dokumen: FM-QC-01 &nbsp;|&nbsp; Rev: 00</span>
+                    </div>
+                    <p class="form-company">PT MAKMUR BERSAMA SAHABAT</p>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="form-section-title">Informasi Kedatangan Barang</h3>
+                    <div class="form-grid-2">
+                        <div class="form-group"><label>Nama Supplier</label><input type="text"
+                                placeholder="Masukkan nama supplier..."></div>
+                        <div class="form-group"><label>Tanggal Kedatangan</label><input type="date"></div>
+                        <div class="form-group"><label>No. Surat Jalan / PO</label><input type="text"
+                                placeholder="Masukkan nomor..."></div>
+                        <div class="form-group"><label>No. Batch / Lot</label><input type="text"
+                                placeholder="Masukkan nomor batch..."></div>
+                        <div class="form-group"><label>Jumlah Preform Diterima</label><input type="number"
+                                placeholder="0"></div>
+                        <div class="form-group"><label>Jumlah Sampel Diperiksa</label><input type="number"
+                                placeholder="0"></div>
+                    </div>
+                </div>
+
+                <!-- Jenis Cacat Reference -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Definisi Jenis Cacat yang Diperiksa</h3>
+                    <div class="defect-legend">
+                        <div class="legend-item"><span class="legend-code">D</span><span>Cacat Dimensi/Ukuran — Preform
+                                tidak sesuai spesifikasi ukuran (panjang, diameter, berat)</span></div>
+                        <div class="legend-item"><span class="legend-code">F</span><span>Cacat Fisik — Retak, gompal,
+                                goresan, gelembung udara pada badan preform</span></div>
+                        <div class="legend-item"><span class="legend-code">W</span><span>Cacat Warna — Warna keruh,
+                                kekuningan, atau tidak sesuai standar (bening transparan)</span></div>
+                        <div class="legend-item"><span class="legend-code">K</span><span>Kontaminasi — Kotoran, benda
+                                asing, noda, atau partikel menempel pada preform</span></div>
+                        <div class="legend-item"><span class="legend-code">T</span><span>Cacat Ketebalan — Ketebalan
+                                dinding preform tidak seragam (terlalu tipis/tebal)</span></div>
+                    </div>
+                </div>
+
+                <!-- Inspection Table -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Hasil Pemeriksaan Sampel Preform (1–50)</h3>
+                    <p class="form-hint">Centang (✓) pada kolom jenis cacat jika ditemukan ketidaksesuaian pada sampel
+                        tersebut.</p>
+                    <div class="table-scroll">
+                        <table class="data-table" id="iqcTable">
+                            <thead>
+                                <tr>
+                                    <th style="width:55px">No.</th>
+                                    <th style="width:80px">Cacat Dimensi (D)</th>
+                                    <th style="width:80px">Cacat Fisik (F)</th>
+                                    <th style="width:80px">Cacat Warna (W)</th>
+                                    <th style="width:80px">Kontaminasi (K)</th>
+                                    <th style="width:80px">Cacat Ketebalan (T)</th>
+                                    <th>Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody id="iqcTableBody">
+                                <!-- Generated by JS -->
+                            </tbody>
+                            <tfoot id="iqcTableFoot">
+                                <tr class="summary-row">
+                                    <td><strong>TOTAL CACAT</strong></td>
+                                    <td><span class="summary-count" id="sumD">0</span></td>
+                                    <td><span class="summary-count" id="sumF">0</span></td>
+                                    <td><span class="summary-count" id="sumW">0</span></td>
+                                    <td><span class="summary-count" id="sumK">0</span></td>
+                                    <td><span class="summary-count" id="sumT">0</span></td>
+                                    <td><span class="summary-count" id="sumTotal">Total: 0</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Rekap Cacat per Jenis -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Rekap Jumlah Cacat per Jenis</h3>
+                    <div class="defect-summary-grid" id="defectSummaryGrid">
+                        <div class="defect-summary-card" data-type="D">
+                            <div class="dsc-icon" style="--c: var(--accent-purple)">D</div>
+                            <div class="dsc-info"><span class="dsc-label">Cacat Dimensi</span><span class="dsc-value"
+                                    id="recapD">0 unit</span></div>
+                        </div>
+                        <div class="defect-summary-card" data-type="F">
+                            <div class="dsc-icon" style="--c: var(--accent-rose)">F</div>
+                            <div class="dsc-info"><span class="dsc-label">Cacat Fisik</span><span class="dsc-value"
+                                    id="recapF">0 unit</span></div>
+                        </div>
+                        <div class="defect-summary-card" data-type="W">
+                            <div class="dsc-icon" style="--c: var(--accent-amber)">W</div>
+                            <div class="dsc-info"><span class="dsc-label">Cacat Warna</span><span class="dsc-value"
+                                    id="recapW">0 unit</span></div>
+                        </div>
+                        <div class="defect-summary-card" data-type="K">
+                            <div class="dsc-icon" style="--c: var(--accent-cyan)">K</div>
+                            <div class="dsc-info"><span class="dsc-label">Kontaminasi</span><span class="dsc-value"
+                                    id="recapK">0 unit</span></div>
+                        </div>
+                        <div class="defect-summary-card" data-type="T">
+                            <div class="dsc-icon" style="--c: var(--accent-emerald)">T</div>
+                            <div class="dsc-info"><span class="dsc-label">Cacat Ketebalan</span><span class="dsc-value"
+                                    id="recapT">0 unit</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evaluasi Pemasok -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Hasil Evaluasi Pemasok</h3>
+                    <div class="form-grid-2">
+                        <div class="form-group"><label>Total Sampel Diperiksa</label><input type="number"
+                                placeholder="0" id="evalTotalSampel"></div>
+                        <div class="form-group"><label>Total Unit Tidak Sesuai</label><input type="number"
+                                placeholder="0" id="evalTotalCacat" readonly class="auto-calc"></div>
+                        <div class="form-group full-width"><label>Jenis Cacat Paling Dominan</label><input type="text"
+                                id="evalDominan" placeholder="—" readonly class="auto-calc"></div>
+                    </div>
+                    <div class="eval-category">
+                        <label class="eval-label">Kategori Pemasok:</label>
+                        <div class="radio-group">
+                            <label class="radio-item"><input type="radio" name="evalCat" value="diterima"><span
+                                    class="radio-custom"></span><span class="radio-text accept">Diterima</span></label>
+                            <label class="radio-item"><input type="radio" name="evalCat" value="catatan"><span
+                                    class="radio-custom"></span><span class="radio-text warning">Diterima dengan
+                                    Catatan</span></label>
+                            <label class="radio-item"><input type="radio" name="evalCat" value="ditolak"><span
+                                    class="radio-custom"></span><span class="radio-text reject">Ditolak</span></label>
+                        </div>
+                    </div>
+                    <div class="form-group full-width" style="margin-top:1rem"><label>Catatan</label><textarea rows="3"
+                            placeholder="Tulis catatan tambahan..."></textarea></div>
+                </div>
+
+                <div class="form-signatures">
+                    <div class="sig-box">
+                        <p class="sig-role">Diperiksa oleh</p>
+                        <p class="sig-title">(Staff QC)</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                    </div>
+                    <div class="sig-box">
+                        <p class="sig-role">Diketahui oleh</p>
+                        <p class="sig-title">(Kepala QC)</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== USULAN 2 — INSPEKSI TUTUP BOTOL ==================== -->
+        <section class="page" id="page-usulan2">
+            <div class="page-header">
+                <div>
+                    <button class="back-btn" onclick="navigateTo('home')">← Kembali</button>
+                    <h1 class="page-title">Usulan 2 — Formulir Inspeksi Kualitas Tutup Botol</h1>
+                    <p class="page-subtitle">Pencatatan Kualitas Botol Selesai Diproduksi</p>
+                </div>
+                <button class="btn-print" onclick="window.print()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+                        <rect x="6" y="14" width="12" height="8" />
+                    </svg>
+                    Cetak
+                </button>
+            </div>
+
+            <div class="info-card">
+                <h3>Deskripsi Usulan</h3>
+                <p>Pemeriksaan kualitas tutup botol diarahkan pada <strong>produk jadi</strong> (setelah proses
+                    capping). Setiap jenis cacat dicatat secara terpisah: <strong>retak/gompal</strong>, <strong>cacat
+                        cetakan</strong>, <strong>warna tidak sesuai</strong>, <strong>ukuran longgar</strong>,
+                    <strong>ukuran ketat</strong>, dan <strong>seal ring rusak</strong>. Data ini menjadi dasar evaluasi
+                    kualitas tutup botol dari pemasok.
+                </p>
+            </div>
+
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-header-top">
+                        <h2>FORMULIR INSPEKSI KUALITAS TUTUP BOTOL PADA PRODUK JADI</h2>
+                        <span class="doc-number">No. Dokumen: FM-QC-02 &nbsp;|&nbsp; Rev: 00</span>
+                    </div>
+                    <p class="form-company">PT MAKMUR BERSAMA SAHABAT</p>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="form-section-title">Informasi Inspeksi</h3>
+                    <div class="form-grid-2">
+                        <div class="form-group"><label>Nama Produk</label><input type="text" value="AMDK 600 ml"
+                                readonly></div>
+                        <div class="form-group"><label>Titik Inspeksi</label><input type="text"
+                                value="Setelah Proses Capping (Produk Jadi)" readonly></div>
+                        <div class="form-group"><label>Tanggal Produksi</label><input type="date"></div>
+                        <div class="form-group"><label>Shift</label><select>
+                                <option value="">Pilih Shift...</option>
+                                <option>Shift 1 (Pagi)</option>
+                                <option>Shift 2 (Siang)</option>
+                                <option>Shift 3 (Malam)</option>
+                            </select></div>
+                        <div class="form-group full-width"><label>Petugas QC</label><input type="text"
+                                placeholder="Nama petugas QC..."></div>
+                    </div>
+                </div>
+
+                <!-- Definisi Jenis Cacat Tutup Botol -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Definisi Jenis Cacat yang Diperiksa</h3>
+                    <div class="defect-legend">
+                        <div class="legend-item"><span class="legend-code">RG</span><span>Retak / Gompal — Tutup botol
+                                retak, pecah, atau gompal secara fisik</span></div>
+                        <div class="legend-item"><span class="legend-code">CC</span><span>Cacat Cetakan — Flash, burr,
+                                permukaan kasar, atau bentuk tidak sempurna dari proses cetak</span></div>
+                        <div class="legend-item"><span class="legend-code">WN</span><span>Warna Tidak Sesuai — Warna
+                                tutup berbeda dari standar warna yang ditentukan</span></div>
+                        <div class="legend-item"><span class="legend-code">LG</span><span>Longgar — Tutup mudah terputar
+                                atau terlepas (torsi terlalu rendah)</span></div>
+                        <div class="legend-item"><span class="legend-code">KT</span><span>Ketat — Tutup terlalu ketat
+                                sehingga sulit dibuka oleh konsumen</span></div>
+                        <div class="legend-item"><span class="legend-code">SR</span><span>Seal Ring Rusak — Seal
+                                ring/tamper-evident band tidak sempurna atau putus</span></div>
+                    </div>
+                </div>
+
+                <!-- Formulir Inspeksi Detail -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Formulir Inspeksi per Waktu Pengambilan Sampel</h3>
+                    <p class="form-hint">Masukkan jumlah unit cacat per jenis cacat yang ditemukan pada setiap waktu
+                        inspeksi.</p>
+                    <div class="table-scroll">
+                        <table class="data-table" id="capInspTable">
+                            <thead>
+                                <tr>
+                                    <th style="width:45px">No</th>
+                                    <th>Jam</th>
+                                    <th style="width:80px">Jml Diperiksa</th>
+                                    <th style="width:65px">Retak/ Gompal</th>
+                                    <th style="width:65px">Cacat Cetakan</th>
+                                    <th style="width:60px">Warna</th>
+                                    <th style="width:60px">Longgar</th>
+                                    <th style="width:60px">Ketat</th>
+                                    <th style="width:65px">Seal Ring</th>
+                                    <th style="width:75px">Total Cacat</th>
+                                    <th style="width:70px">% Cacat</th>
+                                    <th>Tindak Lanjut</th>
+                                </tr>
+                            </thead>
+                            <tbody id="capInspBody">
+                                <!-- Generated by JS: 8 rows -->
+                            </tbody>
+                            <tfoot id="capInspFoot">
+                                <tr class="summary-row">
+                                    <td colspan="2"><strong>TOTAL</strong></td>
+                                    <td><span class="summary-count" id="capSumJml">0</span></td>
+                                    <td><span class="summary-count" id="capSumRG">0</span></td>
+                                    <td><span class="summary-count" id="capSumCC">0</span></td>
+                                    <td><span class="summary-count" id="capSumWN">0</span></td>
+                                    <td><span class="summary-count" id="capSumLG">0</span></td>
+                                    <td><span class="summary-count" id="capSumKT">0</span></td>
+                                    <td><span class="summary-count" id="capSumSR">0</span></td>
+                                    <td><span class="summary-count" id="capSumTotal">0</span></td>
+                                    <td><span class="summary-count" id="capSumPct">0%</span></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Rekap Cacat Tutup Botol -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Rekap Jumlah Cacat per Jenis</h3>
+                    <div class="defect-summary-grid" id="capDefectSummary">
+                        <div class="defect-summary-card">
+                            <div class="dsc-icon" style="--c: var(--accent-rose)">RG</div>
+                            <div class="dsc-info"><span class="dsc-label">Retak / Gompal</span><span class="dsc-value"
+                                    id="capRecapRG">0 unit</span></div>
+                        </div>
+                        <div class="defect-summary-card">
+                            <div class="dsc-icon" style="--c: var(--accent-purple)">CC</div>
+                            <div class="dsc-info"><span class="dsc-label">Cacat Cetakan</span><span class="dsc-value"
+                                    id="capRecapCC">0 unit</span></div>
+                        </div>
+                        <div class="defect-summary-card">
+                            <div class="dsc-icon" style="--c: var(--accent-amber)">WN</div>
+                            <div class="dsc-info"><span class="dsc-label">Warna Tidak Sesuai</span><span
+                                    class="dsc-value" id="capRecapWN">0 unit</span></div>
+                        </div>
+                        <div class="defect-summary-card">
+                            <div class="dsc-icon" style="--c: var(--accent-blue)">LG</div>
+                            <div class="dsc-info"><span class="dsc-label">Longgar</span><span class="dsc-value"
+                                    id="capRecapLG">0 unit</span></div>
+                        </div>
+                        <div class="defect-summary-card">
+                            <div class="dsc-icon" style="--c: var(--accent-cyan)">KT</div>
+                            <div class="dsc-info"><span class="dsc-label">Ketat</span><span class="dsc-value"
+                                    id="capRecapKT">0 unit</span></div>
+                        </div>
+                        <div class="defect-summary-card">
+                            <div class="dsc-icon" style="--c: var(--accent-emerald)">SR</div>
+                            <div class="dsc-info"><span class="dsc-label">Seal Ring Rusak</span><span class="dsc-value"
+                                    id="capRecapSR">0 unit</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-group full-width"><label>Catatan / Evaluasi Keseluruhan</label><textarea rows="3"
+                            placeholder="Tulis catatan evaluasi kualitas tutup botol secara keseluruhan..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-signatures">
+                    <div class="sig-box">
+                        <p class="sig-role">Diperiksa Oleh</p>
+                        <p class="sig-title">Petugas QC</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama..."><label
+                            style="font-size:0.8rem;color:var(--text-muted)">Tanggal: <input type="date"
+                                style="width:auto;display:inline-block;padding:0.2rem 0.5rem"></label>
+                    </div>
+                    <div class="sig-box">
+                        <p class="sig-role">Diketahui Oleh</p>
+                        <p class="sig-title">Kepala Produksi/QC</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama..."><label
+                            style="font-size:0.8rem;color:var(--text-muted)">Tanggal: <input type="date"
+                                style="width:auto;display:inline-block;padding:0.2rem 0.5rem"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== USULAN 3 — MAINTENANCE ==================== -->
+        <section class="page" id="page-usulan3">
+            <div class="page-header">
+                <div>
+                    <button class="back-btn" onclick="navigateTo('home')">← Kembali</button>
+                    <h1 class="page-title">Usulan 3 — Checklist Maintenance Mesin</h1>
+                    <p class="page-subtitle">Formulir Pemeliharaan dan Pengecekan Mesin Harian</p>
+                </div>
+                <button class="btn-print" onclick="window.print()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+                        <rect x="6" y="14" width="12" height="8" />
+                    </svg>
+                    Cetak
+                </button>
+            </div>
+
+            <div class="info-card">
+                <h3>Deskripsi Usulan</h3>
+                <p>Checklist maintenance mencakup pemeriksaan <strong>harian, mingguan, dan bulanan</strong> pada mesin
+                    blowing, mesin filling (bagian filling air), dan mesin filling (bagian capping tutup botol).
+                    Pemeriksaan ini memastikan kondisi komponen mesin terpantau secara berkala sehingga potensi
+                    kerusakan dapat diketahui lebih awal.</p>
+            </div>
+
+            <!-- Tab Selector -->
+            <div class="tab-container">
+                <div class="tab-header">
+                    <button class="tab-btn active" data-tab="tab-blowing" onclick="switchTab(this, 'tab-blowing')">F.1
+                        Mesin Blowing</button>
+                    <button class="tab-btn" data-tab="tab-filling" onclick="switchTab(this, 'tab-filling')">F.2 Filling
+                        Air</button>
+                    <button class="tab-btn" data-tab="tab-capping-maint"
+                        onclick="switchTab(this, 'tab-capping-maint')">F.3 Capping Tutup Botol</button>
+                </div>
+
+                <!-- F.1 Mesin Blowing -->
+                <div class="tab-panel active" id="tab-blowing">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h2>CHECKLIST MAINTENANCE MESIN BLOWING</h2>
+                            <p class="form-company">PT MAKMUR BERSAMA SAHABAT</p>
+                        </div>
+                        <div class="form-section">
+                            <div class="form-grid-2">
+                                <div class="form-group"><label>Tanggal</label><input type="date"></div>
+                                <div class="form-group"><label>Petugas Maintenance</label><input type="text"
+                                        placeholder="Nama petugas..."></div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3 class="form-section-title">Pemeriksaan Harian</h3>
+                            <div class="checklist-group">
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek suhu heater inframerah (zona atas,
+                                            tengah, bawah)</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek tekanan udara kompresor
+                                            (bar)</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek fungsi kipas pendingin leher
+                                            preform</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek putaran preform pada oven
+                                            heater</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kelancaran aliran conveyor
+                                            preform</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kondisi mold (tidak
+                                            retak/baret)</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3 class="form-section-title">Pemeriksaan Mingguan</h3>
+                            <div class="checklist-group">
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Bersihkan mold dari sisa
+                                            plastik/debu</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek akurasi sensor suhu dan sensor
+                                            posisi</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kondisi jalur pneumatic (selang,
+                                            fitting)</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Pelumasan bagian bergerak (rel, engsel
+                                            mold)</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3 class="form-section-title">Pemeriksaan Bulanan</h3>
+                            <div class="checklist-group">
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kondisi motor penggerak dan
+                                            belt</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Ukur tingkat getaran
+                                            mesin</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kelistrikan panel
+                                            kontrol</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Kalibrasi alat ukur suhu dan
+                                            tekanan</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                            </div>
+                        </div>
+                        <div class="form-signatures">
+                            <div class="sig-box">
+                                <p class="sig-role">Petugas Maintenance</p>
+                                <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                            </div>
+                            <div class="sig-box">
+                                <p class="sig-role">Kepala Maintenance</p>
+                                <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- F.2 Filling Air -->
+                <div class="tab-panel" id="tab-filling">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h2>CHECKLIST MAINTENANCE MESIN FILLING — BAGIAN FILLING AIR</h2>
+                            <p class="form-company">PT MAKMUR BERSAMA SAHABAT</p>
+                        </div>
+                        <div class="form-section">
+                            <div class="form-grid-2">
+                                <div class="form-group"><label>Tanggal</label><input type="date"></div>
+                                <div class="form-group"><label>Petugas Maintenance</label><input type="text"
+                                        placeholder="Nama petugas..."></div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3 class="form-section-title">Pemeriksaan Harian</h3>
+                            <div class="checklist-group">
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kelancaran aliran air pada nozzle
+                                            pengisian</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek volume pengisian (sesuai standar 600
+                                            ml)</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kebersihan nozzle dan area
+                                            pengisian</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek aliran conveyor botol
+                                            (masuk/keluar)</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek fungsi sensor level
+                                            air</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3 class="form-section-title">Pemeriksaan Mingguan</h3>
+                            <div class="checklist-group">
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Bersihkan filter air dan saluran
+                                            pipa</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek seal/gasket pada
+                                            nozzle</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kalibrasi
+                                            flowmeter</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3 class="form-section-title">Pemeriksaan Bulanan</h3>
+                            <div class="checklist-group">
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kondisi pompa
+                                            pengisian</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek motor penggerak dan belt
+                                            conveyor</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek panel kelistrikan dan
+                                            grounding</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                            </div>
+                        </div>
+                        <div class="form-signatures">
+                            <div class="sig-box">
+                                <p class="sig-role">Petugas Maintenance</p>
+                                <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                            </div>
+                            <div class="sig-box">
+                                <p class="sig-role">Kepala Maintenance</p>
+                                <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- F.3 Capping Tutup Botol -->
+                <div class="tab-panel" id="tab-capping-maint">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h2>CHECKLIST MAINTENANCE MESIN FILLING — BAGIAN CAPPING TUTUP BOTOL</h2>
+                            <p class="form-company">PT MAKMUR BERSAMA SAHABAT</p>
+                        </div>
+                        <div class="form-section">
+                            <div class="form-grid-2">
+                                <div class="form-group"><label>Tanggal</label><input type="date"></div>
+                                <div class="form-group"><label>Petugas Maintenance</label><input type="text"
+                                        placeholder="Nama petugas..."></div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3 class="form-section-title">Pemeriksaan Harian</h3>
+                            <div class="checklist-group">
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek torsi penguncian tutup
+                                            botol</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kelancaran conveyor tutup
+                                            botol</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek fungsi sensor keberadaan
+                                            tutup</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kondisi chuck/kepala capping (debu,
+                                            aus)</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek posisi botol saat proses capping
+                                            (alignment)</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3 class="form-section-title">Pemeriksaan Mingguan</h3>
+                            <div class="checklist-group">
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Bersihkan chuck dari sisa material
+                                            tutup</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek dan kalibrasi sensor deteksi
+                                            tutup</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Pelumasan komponen
+                                            bergerak</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3 class="form-section-title">Pemeriksaan Bulanan</h3>
+                            <div class="checklist-group">
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek motor servo penggerak
+                                            capping</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Ukur tingkat getaran mesin
+                                            capping</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                                <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                            class="check-custom"></span><span>Cek kelistrikan dan sambungan
+                                            kabel</span></label><input type="text" class="ket-input"
+                                        placeholder="Keterangan"></div>
+                            </div>
+                        </div>
+                        <div class="form-signatures">
+                            <div class="sig-box">
+                                <p class="sig-role">Petugas Maintenance</p>
+                                <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                            </div>
+                            <div class="sig-box">
+                                <p class="sig-role">Kepala Maintenance</p>
+                                <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== USULAN 4 — SUHU & KELEMBAPAN (DIPISAH) ==================== -->
+        <section class="page" id="page-usulan4">
+            <div class="page-header">
+                <div>
+                    <button class="back-btn" onclick="navigateTo('home')">← Kembali</button>
+                    <h1 class="page-title">Usulan 4 — SOP Pengendalian Suhu & Kelembapan</h1>
+                    <p class="page-subtitle">Formulir Pengecekan Suhu Ruangan & Mesin Cetak</p>
+                </div>
+                <button class="btn-print" onclick="window.print()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+                        <rect x="6" y="14" width="12" height="8" />
+                    </svg>
+                    Cetak
+                </button>
+            </div>
+
+            <div class="info-card">
+                <h3>Deskripsi Usulan</h3>
+                <p>Perusahaan perlu menyediakan <strong>thermo-hygrometer</strong> agar suhu dan kelembapan ruang
+                    produksi dapat diukur secara objektif, serta <strong>dehumidifier</strong> untuk menjaga kelembapan
+                    ruangan. Pencatatan suhu dan kelembapan dilakukan <strong>secara terpisah</strong> dengan standar
+                    masing-masing agar setiap penyimpangan dapat diidentifikasi dan ditindaklanjuti dengan tepat.</p>
+            </div>
+
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-header-top">
+                        <h2>SOP PENGENDALIAN SUHU & KELEMBAPAN AREA PRODUKSI</h2>
+                        <span class="doc-number">No. Dokumen: SOP-PR-01 &nbsp;|&nbsp; Rev: 00</span>
+                    </div>
+                    <p class="form-company">PT MAKMUR BERSAMA SAHABAT</p>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="form-section-title">Prosedur Operasional Standar</h3>
+                    <div class="sop-steps">
+                        <div class="sop-step">
+                            <div class="step-num">1</div>
+                            <div class="step-text">Pasang thermo-hygrometer pada lokasi yang representatif di area
+                                produksi (dekat mesin blowing dan filling).</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">2</div>
+                            <div class="step-text">Catat suhu dan kelembapan pada awal shift, tengah shift, dan akhir
+                                shift menggunakan formulir pencatatan.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">3</div>
+                            <div class="step-text">Bandingkan hasil pengukuran suhu dengan standar:
+                                <strong>22–28°C</strong>. Bandingkan kelembapan dengan standar: <strong>40–60%
+                                    RH</strong>.
+                            </div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">4</div>
+                            <div class="step-text">Jika suhu melebihi batas, lakukan penyesuaian AC/ventilasi. Jika
+                                kelembapan melebihi batas, nyalakan dehumidifier.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">5</div>
+                            <div class="step-text">Laporkan kondisi penyimpangan kepada Kepala Produksi dan catat
+                                tindakan korektif yang dilakukan.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">6</div>
+                            <div class="step-text">Rekap hasil pencatatan mingguan dan evaluasi tren suhu/kelembapan
+                                setiap bulan.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Umum -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Informasi Pencatatan</h3>
+                    <div class="form-grid-2">
+                        <div class="form-group"><label>Tanggal</label><input type="date"></div>
+                        <div class="form-group"><label>Shift</label><select>
+                                <option value="">Pilih Shift...</option>
+                                <option>Shift 1</option>
+                                <option>Shift 2</option>
+                                <option>Shift 3</option>
+                            </select></div>
+                        <div class="form-group"><label>Petugas</label><input type="text" placeholder="Nama petugas...">
+                        </div>
+                        <div class="form-group"><label>Lokasi Pengukuran</label><input type="text"
+                                placeholder="Area mesin blowing / filling"></div>
+                    </div>
+                </div>
+
+                <!-- TABEL SUHU (TERPISAH) -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Pencatatan Suhu Ruang Produksi</h3>
+                    <div class="standard-badge">Standar Suhu: <strong>22 – 28 °C</strong></div>
+                    <div class="table-scroll" style="margin-top:1rem">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Waktu Pengukuran</th>
+                                    <th>Suhu Terukur (°C)</th>
+                                    <th>Standar (°C)</th>
+                                    <th>Sesuai Standar?</th>
+                                    <th>Tindakan Korektif</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Awal Shift</td>
+                                    <td><input type="number" step="0.1" placeholder="°C"></td>
+                                    <td>22 – 28</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="..."></td>
+                                </tr>
+                                <tr>
+                                    <td>Tengah Shift</td>
+                                    <td><input type="number" step="0.1" placeholder="°C"></td>
+                                    <td>22 – 28</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="..."></td>
+                                </tr>
+                                <tr>
+                                    <td>Akhir Shift</td>
+                                    <td><input type="number" step="0.1" placeholder="°C"></td>
+                                    <td>22 – 28</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="..."></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TABEL KELEMBAPAN (TERPISAH) -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Pencatatan Kelembapan Ruang Produksi</h3>
+                    <div class="standard-badge">Standar Kelembapan: <strong>40 – 60 % RH</strong></div>
+                    <div class="table-scroll" style="margin-top:1rem">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Waktu Pengukuran</th>
+                                    <th>Kelembapan Terukur (% RH)</th>
+                                    <th>Standar (% RH)</th>
+                                    <th>Sesuai Standar?</th>
+                                    <th>Tindakan Korektif</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Awal Shift</td>
+                                    <td><input type="number" step="0.1" placeholder="%"></td>
+                                    <td>40 – 60</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="..."></td>
+                                </tr>
+                                <tr>
+                                    <td>Tengah Shift</td>
+                                    <td><input type="number" step="0.1" placeholder="%"></td>
+                                    <td>40 – 60</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="..."></td>
+                                </tr>
+                                <tr>
+                                    <td>Akhir Shift</td>
+                                    <td><input type="number" step="0.1" placeholder="%"></td>
+                                    <td>40 – 60</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="..."></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-group full-width"><label>Catatan Tambahan</label><textarea rows="3"
+                            placeholder="Catatan penyimpangan atau observasi lainnya..."></textarea></div>
+                </div>
+
+                <div class="form-signatures">
+                    <div class="sig-box">
+                        <p class="sig-role">Petugas Produksi</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                    </div>
+                    <div class="sig-box">
+                        <p class="sig-role">Kepala Produksi</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== USULAN 5 — VERIFIKASI PEMANASAN (REDESIGN) ==================== -->
+        <section class="page" id="page-usulan5">
+            <div class="page-header">
+                <div>
+                    <button class="back-btn" onclick="navigateTo('home')">← Kembali</button>
+                    <h1 class="page-title">Usulan 5 — SOP & Formulir Verifikasi Pemanasan Preform</h1>
+                    <p class="page-subtitle">Verifikasi Suhu Heater Sebelum Proses Tiup</p>
+                </div>
+                <button class="btn-print" onclick="window.print()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+                        <rect x="6" y="14" width="12" height="8" />
+                    </svg>
+                    Cetak
+                </button>
+            </div>
+
+            <div class="info-card">
+                <h3>Deskripsi Usulan</h3>
+                <p>Formulir verifikasi pemanasan preform terdiri dari beberapa bagian: (A) <strong>Suhu setting/heater
+                        per zona</strong>, (B) <strong>Daya lampu pemanas per zona</strong> (atas, tengah, bawah dalam
+                    persen), (C) <strong>Pengecekan cooling thread</strong> apakah aktif, (D) <strong>Kesesuaian
+                        keseluruhan parameter dalam standar</strong>, dan (E) <strong>Verifikasi kualitas botol hasil
+                        peniupan</strong>.</p>
+            </div>
+
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-header-top">
+                        <h2>SOP & FORMULIR VERIFIKASI PEMANASAN PREFORM</h2>
+                        <span class="doc-number">No. Dokumen: SOP-PR-02 &nbsp;|&nbsp; Rev: 00</span>
+                    </div>
+                    <p class="form-company">PT MAKMUR BERSAMA SAHABAT</p>
+                </div>
+
+                <!-- SOP -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Prosedur Operasional Standar</h3>
+                    <div class="sop-steps">
+                        <div class="sop-step">
+                            <div class="step-num">1</div>
+                            <div class="step-text">Sebelum memulai produksi, periksa dan atur suhu heater inframerah
+                                sesuai standar per zona (atas, tengah, bawah) pada kisaran <strong>100–120°C</strong>.
+                            </div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">2</div>
+                            <div class="step-text">Atur daya lampu pemanas per zona sesuai standar yang ditetapkan
+                                (<strong>80–100%</strong>) dan pastikan semua lampu menyala normal.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">3</div>
+                            <div class="step-text">Pastikan <strong>cooling thread (kipas pendingin leher
+                                    preform)</strong> dalam kondisi aktif/menyala sebelum preform memasuki oven.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">4</div>
+                            <div class="step-text">Jalankan mesin dan amati preform pertama: pastikan preform berputar
+                                penuh melewati lampu heater dan melalui tahap soaking.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">5</div>
+                            <div class="step-text">Verifikasi parameter keseluruhan apakah sesuai standar yang
+                                ditetapkan sebelum produksi massal dimulai.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">6</div>
+                            <div class="step-text">Periksa botol hasil peniupan pertama: tidak boleh keruh
+                                (overheating), kaku/retak (underheating), atau dasar terlalu tipis.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Umum -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Informasi Verifikasi</h3>
+                    <div class="form-grid-2">
+                        <div class="form-group"><label>Tanggal</label><input type="date"></div>
+                        <div class="form-group"><label>Operator Mesin</label><input type="text"
+                                placeholder="Nama operator..."></div>
+                        <div class="form-group"><label>Shift</label><select>
+                                <option value="">Pilih Shift...</option>
+                                <option>Shift 1 (Pagi)</option>
+                                <option>Shift 2 (Siang)</option>
+                                <option>Shift 3 (Malam)</option>
+                            </select></div>
+                        <div class="form-group"><label>No. Mesin Blowing</label><input type="text"
+                                placeholder="Mis: BM-01"></div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Suhu Heater -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Bagian A — Suhu Setting / Suhu Heater per Zona</h3>
+                    <div class="standard-badge">Standar Suhu Heater: <strong>100 – 120 °C</strong></div>
+                    <div class="table-scroll" style="margin-top:1rem">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Zona Heater</th>
+                                    <th>Suhu Setting (°C)</th>
+                                    <th>Suhu Aktual (°C)</th>
+                                    <th>Sesuai Standar?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Zona Atas</td>
+                                    <td><input type="number" step="0.1" placeholder="°C"></td>
+                                    <td><input type="number" step="0.1" placeholder="°C"></td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Zona Tengah</td>
+                                    <td><input type="number" step="0.1" placeholder="°C"></td>
+                                    <td><input type="number" step="0.1" placeholder="°C"></td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Zona Bawah</td>
+                                    <td><input type="number" step="0.1" placeholder="°C"></td>
+                                    <td><input type="number" step="0.1" placeholder="°C"></td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Daya Lampu -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Bagian B — Daya Lampu Pemanas per Zona (%)</h3>
+                    <div class="standard-badge">Standar Daya Lampu: <strong>80 – 100 %</strong></div>
+                    <div class="table-scroll" style="margin-top:1rem">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Zona Lampu</th>
+                                    <th>Daya Standar (%)</th>
+                                    <th>Daya Aktual (%)</th>
+                                    <th>Sesuai Standar?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Zona Atas</td>
+                                    <td>80 – 100</td>
+                                    <td><input type="number" step="1" min="0" max="100" placeholder="%"></td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Zona Tengah</td>
+                                    <td>80 – 100</td>
+                                    <td><input type="number" step="1" min="0" max="100" placeholder="%"></td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Zona Bawah</td>
+                                    <td>80 – 100</td>
+                                    <td><input type="number" step="1" min="0" max="100" placeholder="%"></td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Sesuai</option>
+                                            <option value="warning">⚠️ Tidak Sesuai</option>
+                                        </select></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Bagian C: Cooling Thread -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Bagian C — Pengecekan Cooling Thread (Kipas Pendingin Leher Preform)
+                    </h3>
+                    <div class="cooling-check-box">
+                        <div class="cooling-question">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24"
+                                height="24">
+                                <path
+                                    d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66l4.24-4.24" />
+                            </svg>
+                            <span>Apakah cooling thread (kipas pendingin leher preform) dalam kondisi aktif /
+                                menyala?</span>
+                        </div>
+                        <div class="radio-group" style="margin-top:12px">
+                            <label class="radio-item"><input type="radio" name="coolingThread" value="aktif"><span
+                                    class="radio-custom"></span><span class="radio-text accept">✅ Aktif /
+                                    Menyala</span></label>
+                            <label class="radio-item"><input type="radio" name="coolingThread" value="mati"><span
+                                    class="radio-custom"></span><span class="radio-text reject">❌ Tidak Aktif /
+                                    Mati</span></label>
+                        </div>
+                        <div class="form-group" style="margin-top:12px"><label>Keterangan Tambahan</label><input
+                                type="text" placeholder="Mis: RPM kipas normal, suara normal..."></div>
+                    </div>
+                </div>
+
+                <!-- Bagian D: Kesesuaian Standar Keseluruhan -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Bagian D — Kesesuaian Standar Keseluruhan</h3>
+                    <div class="overall-check-box">
+                        <p class="overall-question">Berdasarkan pengecekan Bagian A, B, dan C di atas, apakah
+                            <strong>seluruh parameter pemanasan preform</strong> sudah sesuai dengan standar yang
+                            ditetapkan?
+                        </p>
+                        <div class="radio-group" style="margin-top:12px">
+                            <label class="radio-item"><input type="radio" name="overallStandard" value="sesuai"><span
+                                    class="radio-custom"></span><span class="radio-text accept">✅ Semua Sesuai Standar —
+                                    Produksi Dapat Dimulai</span></label>
+                            <label class="radio-item"><input type="radio" name="overallStandard" value="tidak"><span
+                                    class="radio-custom"></span><span class="radio-text reject">⚠️ Ada Parameter Tidak
+                                    Sesuai — Perlu Penyesuaian</span></label>
+                        </div>
+                        <div class="form-group" style="margin-top:12px"><label>Catatan Penyesuaian (jika
+                                ada)</label><textarea rows="2"
+                                placeholder="Jelaskan parameter yang tidak sesuai dan tindakan yang dilakukan..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian E: Verifikasi Kualitas Botol -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Bagian E — Verifikasi Kualitas Botol Hasil Peniupan</h3>
+                    <p class="form-hint">Periksa botol hasil peniupan pertama sebelum produksi massal dimulai.</p>
+                    <div class="checklist-group">
+                        <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                    class="check-custom"></span><span>Botol tidak keruh (tidak mengalami
+                                    overheating)</span></label><select class="status-select">
+                                <option value="">—</option>
+                                <option value="normal">✅ OK</option>
+                                <option value="warning">⚠️ Tidak OK</option>
+                            </select></div>
+                        <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                    class="check-custom"></span><span>Botol tidak kaku/retak (tidak mengalami
+                                    underheating)</span></label><select class="status-select">
+                                <option value="">—</option>
+                                <option value="normal">✅ OK</option>
+                                <option value="warning">⚠️ Tidak OK</option>
+                            </select></div>
+                        <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                    class="check-custom"></span><span>Dasar botol tidak terlalu
+                                    tipis</span></label><select class="status-select">
+                                <option value="">—</option>
+                                <option value="normal">✅ OK</option>
+                                <option value="warning">⚠️ Tidak OK</option>
+                            </select></div>
+                        <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                    class="check-custom"></span><span>Bentuk botol sempurna sesuai cetakan (tidak
+                                    penyok/asimetris)</span></label><select class="status-select">
+                                <option value="">—</option>
+                                <option value="normal">✅ OK</option>
+                                <option value="warning">⚠️ Tidak OK</option>
+                            </select></div>
+                        <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                    class="check-custom"></span><span>Leher botol tidak berubah bentuk (thread
+                                    utuh)</span></label><select class="status-select">
+                                <option value="">—</option>
+                                <option value="normal">✅ OK</option>
+                                <option value="warning">⚠️ Tidak OK</option>
+                            </select></div>
+                        <div class="checklist-item"><label class="check-label"><input type="checkbox"><span
+                                    class="check-custom"></span><span>Ketebalan dinding botol
+                                    merata</span></label><select class="status-select">
+                                <option value="">—</option>
+                                <option value="normal">✅ OK</option>
+                                <option value="warning">⚠️ Tidak OK</option>
+                            </select></div>
+                    </div>
+
+                    <!-- Kesimpulan Verifikasi -->
+                    <div class="overall-check-box" style="margin-top:20px">
+                        <p class="overall-question"><strong>Kesimpulan Verifikasi Botol:</strong></p>
+                        <div class="radio-group" style="margin-top:8px">
+                            <label class="radio-item"><input type="radio" name="botolVerif" value="lolos"><span
+                                    class="radio-custom"></span><span class="radio-text accept">✅ Botol Lolos Verifikasi
+                                    — Kualitas Baik</span></label>
+                            <label class="radio-item"><input type="radio" name="botolVerif" value="gagal"><span
+                                    class="radio-custom"></span><span class="radio-text reject">❌ Botol Tidak Lolos —
+                                    Perlu Penyesuaian Parameter</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-group full-width"><label>Catatan Tambahan</label><textarea rows="3"
+                            placeholder="Tulis catatan jika ditemukan penyimpangan..."></textarea></div>
+                </div>
+
+                <div class="form-signatures">
+                    <div class="sig-box">
+                        <p class="sig-role">Operator Mesin Blowing</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                    </div>
+                    <div class="sig-box">
+                        <p class="sig-role">Kepala Produksi</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== USULAN 6 — PEMBERSIHAN CAPPING ==================== -->
+        <section class="page" id="page-usulan6">
+            <div class="page-header">
+                <div>
+                    <button class="back-btn" onclick="navigateTo('home')">← Kembali</button>
+                    <h1 class="page-title">Usulan 6 — Jadwal & Prosedur Pembersihan Mesin Capping</h1>
+                    <p class="page-subtitle">SOP Pembersihan Mesin Penutup Botol Harian</p>
+                </div>
+                <button class="btn-print" onclick="window.print()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+                        <rect x="6" y="14" width="12" height="8" />
+                    </svg>
+                    Cetak
+                </button>
+            </div>
+
+            <div class="info-card">
+                <h3>Deskripsi Usulan</h3>
+                <p>Jadwal pembersihan mesin capping dilakukan secara rutin dengan prosedur yang jelas. Pembersihan
+                    meliputi <strong>chuck/kepala capping</strong>, <strong>conveyor tutup botol</strong>,
+                    <strong>sensor tutup botol</strong>, dan <strong>hopper/penampung tutup</strong>. Setiap Sabtu
+                    dilakukan pembersihan menyeluruh termasuk rangka dan area sekitar mesin.
+                </p>
+            </div>
+
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-header-top">
+                        <h2>JADWAL DAN PROSEDUR PEMBERSIHAN MESIN CAPPING</h2>
+                        <span class="doc-number">No. Dokumen: FM-MT-01 &nbsp;|&nbsp; Rev: 00</span>
+                    </div>
+                    <p class="form-company">PT MAKMUR BERSAMA SAHABAT</p>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="form-section-title">Prosedur Pembersihan</h3>
+                    <div class="sop-steps">
+                        <div class="sop-step">
+                            <div class="step-num">1</div>
+                            <div class="step-text">Matikan mesin capping dan pastikan aliran listrik serta udara
+                                bertekanan dalam kondisi aman sebelum pembersihan dilakukan.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">2</div>
+                            <div class="step-text">Bersihkan bagian chuck atau kepala capping dari debu dan sisa
+                                material tutup botol menggunakan kain dan alat bantu yang sesuai.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">3</div>
+                            <div class="step-text">Bersihkan jalur conveyor tutup botol dari kotoran atau tutup botol
+                                yang tersangkut.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">4</div>
+                            <div class="step-text">Periksa dan bersihkan sensor tutup botol agar tetap peka dalam
+                                mendeteksi keberadaan tutup.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">5</div>
+                            <div class="step-text">Bersihkan hopper/penampung tutup botol dari sisa tutup yang rusak
+                                atau kotoran.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">6</div>
+                            <div class="step-text">Catat hasil pembersihan pada jadwal pembersihan dan berikan paraf
+                                sebagai bukti pelaksanaan.</div>
+                        </div>
+                        <div class="sop-step">
+                            <div class="step-num">7</div>
+                            <div class="step-text">Laporkan kepada penanggung jawab produksi apabila ditemukan kondisi
+                                komponen yang tidak normal selama pembersihan.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="form-section-title">Jadwal Pembersihan Mingguan Mesin Capping</h3>
+                    <div class="form-grid-2">
+                        <div class="form-group"><label>Minggu ke-</label><input type="number" placeholder="1" min="1"
+                                max="52"></div>
+                        <div class="form-group"><label>Bulan / Tahun</label><input type="month"></div>
+                    </div>
+                    <div class="table-scroll" style="margin-top:1rem">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th style="width:50px">No</th>
+                                    <th>Hari/Tanggal</th>
+                                    <th>Bagian yang Dibersihkan</th>
+                                    <th>Metode Pembersihan</th>
+                                    <th>Kondisi Setelah Dibersihkan</th>
+                                    <th>Petugas</th>
+                                    <th style="width:70px">Paraf</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><strong>Senin</strong><br><input type="date" style="width:100%"></td>
+                                    <td>Chuck / kepala capping</td>
+                                    <td>Lap kain bersih + blower udara</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Bersih</option>
+                                            <option value="warning">⚠️ Perlu Perhatian</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="Nama..."></td>
+                                    <td><input type="checkbox" class="paraf-check"></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><strong>Selasa</strong><br><input type="date" style="width:100%"></td>
+                                    <td>Conveyor tutup botol</td>
+                                    <td>Lap + pembersihan manual sisa tutup</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Bersih</option>
+                                            <option value="warning">⚠️ Perlu Perhatian</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="Nama..."></td>
+                                    <td><input type="checkbox" class="paraf-check"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><strong>Rabu</strong><br><input type="date" style="width:100%"></td>
+                                    <td>Sensor tutup botol</td>
+                                    <td>Lap halus + cek kepekaan sensor</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Bersih</option>
+                                            <option value="warning">⚠️ Perlu Perhatian</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="Nama..."></td>
+                                    <td><input type="checkbox" class="paraf-check"></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><strong>Kamis</strong><br><input type="date" style="width:100%"></td>
+                                    <td>Chuck / kepala capping</td>
+                                    <td>Lap kain bersih + blower udara</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Bersih</option>
+                                            <option value="warning">⚠️ Perlu Perhatian</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="Nama..."></td>
+                                    <td><input type="checkbox" class="paraf-check"></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><strong>Jumat</strong><br><input type="date" style="width:100%"></td>
+                                    <td>Hopper / penampung tutup botol</td>
+                                    <td>Kosongkan, bersihkan, cek kondisi</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Bersih</option>
+                                            <option value="warning">⚠️ Perlu Perhatian</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="Nama..."></td>
+                                    <td><input type="checkbox" class="paraf-check"></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><strong>Sabtu</strong><br><input type="date" style="width:100%"></td>
+                                    <td>Keseluruhan area mesin capping</td>
+                                    <td>Pembersihan menyeluruh (rangka, area sekitar, jalur)</td>
+                                    <td><select class="status-select">
+                                            <option value="">—</option>
+                                            <option value="normal">✅ Bersih</option>
+                                            <option value="warning">⚠️ Perlu Perhatian</option>
+                                        </select></td>
+                                    <td><input type="text" placeholder="Nama..."></td>
+                                    <td><input type="checkbox" class="paraf-check"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-group full-width"><label>Catatan / Temuan Abnormal</label><textarea rows="3"
+                            placeholder="Catat jika ada kondisi komponen yang tidak normal selama proses pembersihan..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-signatures">
+                    <div class="sig-box">
+                        <p class="sig-role">Dilaksanakan Oleh</p>
+                        <p class="sig-title">Petugas Kebersihan/Operator</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama..."><label
+                            style="font-size:0.8rem;color:var(--text-muted)">Tanggal: <input type="date"
+                                style="width:auto;display:inline-block;padding:0.2rem 0.5rem"></label>
+                    </div>
+                    <div class="sig-box">
+                        <p class="sig-role">Diperiksa Oleh</p>
+                        <p class="sig-title">Kepala Maintenance</p>
+                        <div class="sig-line"></div><input type="text" class="sig-name" placeholder="Nama..."><label
+                            style="font-size:0.8rem;color:var(--text-muted)">Tanggal: <input type="date"
+                                style="width:auto;display:inline-block;padding:0.2rem 0.5rem"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== RIWAYAT PEMERIKSAAN (MANAJEMEN) ==================== -->
+        <section class="page" id="page-riwayat">
+            <button class="back-btn" onclick="navigateTo('home')">← Kembali ke Beranda</button>
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Riwayat Pemeriksaan</h1>
+                    <p class="page-subtitle">Ringkasan aktivitas pemeriksaan untuk Kepala Produksi / Kepala Maintenance</p>
+                </div>
+                <button class="btn-print" onclick="window.print()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+                        <rect x="6" y="14" width="12" height="8" />
+                    </svg>
+                    Cetak Laporan
+                </button>
+            </div>
+
+            <!-- Filter & Periode -->
+            <div class="form-container">
+                <div class="form-section">
+                    <h3 class="form-section-title">Filter Periode</h3>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label>Bulan / Tahun</label>
+                            <input type="month" id="riwayatBulan">
+                        </div>
+                        <div class="form-group">
+                            <label>Jenis Formulir</label>
+                            <select id="riwayatFilter">
+                                <option value="semua">Semua Formulir</option>
+                                <option value="usulan1">Usulan 1 — IQC Preform</option>
+                                <option value="usulan2">Usulan 2 — Inspeksi Tutup Botol</option>
+                                <option value="usulan3">Usulan 3 — Checklist Maintenance</option>
+                                <option value="usulan4">Usulan 4 — SOP Suhu & Kelembapan</option>
+                                <option value="usulan5">Usulan 5 — Verifikasi Pemanasan</option>
+                                <option value="usulan6">Usulan 6 — Pembersihan Capping</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Stats untuk Manajemen -->
+            <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="stat-card stat-purple">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="riwayatTotalInspeksi">0</span>
+                        <span class="stat-label">Total Inspeksi Bulan Ini</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-emerald">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="riwayatFormulirAktif">6</span>
+                        <span class="stat-label">Formulir Aktif</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-blue">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="riwayatHariAktif">0</span>
+                        <span class="stat-label">Hari dengan Aktivitas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aktivitas per Formulir -->
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Ringkasan Aktivitas per Formulir</h2>
+                    <p class="form-company">Rekap jumlah pemeriksaan yang telah dilakukan per jenis formulir</p>
+                </div>
+                <div class="form-section">
+                    <div class="riwayat-form-grid">
+                        <!-- Usulan 1 -->
+                        <div class="riwayat-form-card">
+                            <div class="rfc-header">
+                                <div class="rfc-badge lamp-e">E</div>
+                                <div class="rfc-info">
+                                    <span class="rfc-title">IQC Preform & Evaluasi Pemasok</span>
+                                    <span class="rfc-sub">Usulan 1</span>
+                                </div>
+                            </div>
+                            <div class="rfc-stats">
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc1Count">0</span>
+                                    <span class="rfc-stat-label">Kali Inspeksi</span>
+                                </div>
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc1LastDate">—</span>
+                                    <span class="rfc-stat-label">Terakhir Diperiksa</span>
+                                </div>
+                            </div>
+                            <div class="rfc-bar"><div class="rfc-bar-fill" id="rfc1Bar" style="width:0%"></div></div>
+                        </div>
+                        <!-- Usulan 2 -->
+                        <div class="riwayat-form-card">
+                            <div class="rfc-header">
+                                <div class="rfc-badge lamp-e">E</div>
+                                <div class="rfc-info">
+                                    <span class="rfc-title">Inspeksi Kualitas Tutup Botol</span>
+                                    <span class="rfc-sub">Usulan 2</span>
+                                </div>
+                            </div>
+                            <div class="rfc-stats">
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc2Count">0</span>
+                                    <span class="rfc-stat-label">Kali Inspeksi</span>
+                                </div>
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc2LastDate">—</span>
+                                    <span class="rfc-stat-label">Terakhir Diperiksa</span>
+                                </div>
+                            </div>
+                            <div class="rfc-bar"><div class="rfc-bar-fill" id="rfc2Bar" style="width:0%"></div></div>
+                        </div>
+                        <!-- Usulan 3 -->
+                        <div class="riwayat-form-card">
+                            <div class="rfc-header">
+                                <div class="rfc-badge lamp-f">F</div>
+                                <div class="rfc-info">
+                                    <span class="rfc-title">Checklist Maintenance Mesin</span>
+                                    <span class="rfc-sub">Usulan 3</span>
+                                </div>
+                            </div>
+                            <div class="rfc-stats">
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc3Count">0</span>
+                                    <span class="rfc-stat-label">Kali Inspeksi</span>
+                                </div>
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc3LastDate">—</span>
+                                    <span class="rfc-stat-label">Terakhir Diperiksa</span>
+                                </div>
+                            </div>
+                            <div class="rfc-bar"><div class="rfc-bar-fill" id="rfc3Bar" style="width:0%"></div></div>
+                        </div>
+                        <!-- Usulan 4 -->
+                        <div class="riwayat-form-card">
+                            <div class="rfc-header">
+                                <div class="rfc-badge lamp-g">G</div>
+                                <div class="rfc-info">
+                                    <span class="rfc-title">SOP Suhu & Kelembapan</span>
+                                    <span class="rfc-sub">Usulan 4</span>
+                                </div>
+                            </div>
+                            <div class="rfc-stats">
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc4Count">0</span>
+                                    <span class="rfc-stat-label">Kali Inspeksi</span>
+                                </div>
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc4LastDate">—</span>
+                                    <span class="rfc-stat-label">Terakhir Diperiksa</span>
+                                </div>
+                            </div>
+                            <div class="rfc-bar"><div class="rfc-bar-fill" id="rfc4Bar" style="width:0%"></div></div>
+                        </div>
+                        <!-- Usulan 5 -->
+                        <div class="riwayat-form-card">
+                            <div class="rfc-header">
+                                <div class="rfc-badge lamp-g">G</div>
+                                <div class="rfc-info">
+                                    <span class="rfc-title">Verifikasi Pemanasan Preform</span>
+                                    <span class="rfc-sub">Usulan 5</span>
+                                </div>
+                            </div>
+                            <div class="rfc-stats">
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc5Count">0</span>
+                                    <span class="rfc-stat-label">Kali Inspeksi</span>
+                                </div>
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc5LastDate">—</span>
+                                    <span class="rfc-stat-label">Terakhir Diperiksa</span>
+                                </div>
+                            </div>
+                            <div class="rfc-bar"><div class="rfc-bar-fill" id="rfc5Bar" style="width:0%"></div></div>
+                        </div>
+                        <!-- Usulan 6 -->
+                        <div class="riwayat-form-card">
+                            <div class="rfc-header">
+                                <div class="rfc-badge lamp-h">H</div>
+                                <div class="rfc-info">
+                                    <span class="rfc-title">Pembersihan Mesin Capping</span>
+                                    <span class="rfc-sub">Usulan 6</span>
+                                </div>
+                            </div>
+                            <div class="rfc-stats">
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc6Count">0</span>
+                                    <span class="rfc-stat-label">Kali Inspeksi</span>
+                                </div>
+                                <div class="rfc-stat">
+                                    <span class="rfc-stat-val" id="rfc6LastDate">—</span>
+                                    <span class="rfc-stat-label">Terakhir Diperiksa</span>
+                                </div>
+                            </div>
+                            <div class="rfc-bar"><div class="rfc-bar-fill" id="rfc6Bar" style="width:0%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Log Pemeriksaan (Tabel) -->
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-header-top">
+                        <div>
+                            <h2>Log Pemeriksaan</h2>
+                            <p class="form-company">Catatan riwayat inspeksi yang telah dilakukan oleh operator</p>
+                        </div>
+                        <button class="btn-add-log" onclick="addInspectionLog()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                            Tambah Catatan
+                        </button>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="table-scroll">
+                        <table class="data-table" id="logTable">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Tanggal</th>
+                                    <th>Formulir</th>
+                                    <th>Shift</th>
+                                    <th>Petugas</th>
+                                    <th>Status</th>
+                                    <th>Catatan</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="logTableBody">
+                                <!-- Dynamic rows will be added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="empty-state" id="emptyLogState">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48" style="color:var(--text-muted);margin-bottom:12px">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg>
+                        <p>Belum ada catatan pemeriksaan.</p>
+                        <p style="font-size:0.8rem;color:var(--text-muted)">Klik "Tambah Catatan" untuk mencatat inspeksi yang telah dilakukan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ringkasan Bulanan -->
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Kalender Aktivitas Bulanan</h2>
+                    <p class="form-company">Visualisasi hari-hari di mana pemeriksaan dilakukan</p>
+                </div>
+                <div class="form-section">
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Calendar will be generated by JS -->
+                    </div>
+                    <div class="calendar-legend">
+                        <div class="cal-legend-item">
+                            <span class="cal-dot cal-dot-none"></span>
+                            <span>Tidak ada inspeksi</span>
+                        </div>
+                        <div class="cal-legend-item">
+                            <span class="cal-dot cal-dot-low"></span>
+                            <span>1–2 inspeksi</span>
+                        </div>
+                        <div class="cal-legend-item">
+                            <span class="cal-dot cal-dot-med"></span>
+                            <span>3–4 inspeksi</span>
+                        </div>
+                        <div class="cal-legend-item">
+                            <span class="cal-dot cal-dot-high"></span>
+                            <span>5+ inspeksi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tanda Tangan Kepala -->
+            <div class="form-container">
+                <div class="form-section">
+                    <h3 class="form-section-title">Verifikasi Kepala Bagian</h3>
+                    <p class="form-hint">Bagian ini diisi oleh Kepala Produksi atau Kepala Maintenance sebagai bukti telah meninjau riwayat pemeriksaan.</p>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label>Periode yang Ditinjau</label>
+                            <input type="month" id="reviewPeriod">
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal Peninjauan</label>
+                            <input type="date" id="reviewDate">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Catatan Manajemen</label>
+                            <textarea rows="3" placeholder="Tulis evaluasi atau catatan untuk periode ini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-signatures">
+                    <div class="sig-box">
+                        <p class="sig-role">Kepala Produksi</p>
+                        <div class="sig-line"></div>
+                        <input type="text" class="sig-name" placeholder="Nama...">
+                    </div>
+                    <div class="sig-box">
+                        <p class="sig-role">Kepala Maintenance</p>
+                        <div class="sig-line"></div>
+                        <input type="text" class="sig-name" placeholder="Nama...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
